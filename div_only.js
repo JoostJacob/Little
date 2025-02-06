@@ -1,2 +1,10 @@
-document.getElementById("resultDiv").innerHTML=add1(add1(4));
+function clrsrc() {
+  document.getElementById("resultDiv").innerHTML='';
+}
+
+function writeln(str) {
+  document.write(str) + '</br>';
+}
+
+writeln('add1(41) = ' + add1(41));
 
