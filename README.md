@@ -1,2 +1,2 @@
 # Little
-Little books javascript implementations <a href="https://joostjacob.github.io/Little/div_only.html">here</a>.
+Javascript sandbox <a href="https://joostjacob.github.io/Little/evaljs.html">here</a>.
