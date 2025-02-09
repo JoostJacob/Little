@@ -5,18 +5,18 @@
 <legend>Input Box</legend>
   <textarea id="inputbox" style="
     box-sizing: content-box;
-    font-family: 'Programma', mono;
-    height: 2in;
+    font-family: 'Programma', monospace;
+    height: 3in;
     overflow: auto;
     padding: 1em;
-    width: 95%;">(define demo '(((hotdogs))(and)(pickle) relish))
-(car (car demo))
+    width: 95%;">function times10(n) { return 10 * n; }
+add1(times10(4));
 </textarea>
 </fieldset>
 
 <p align="center">
   <input id="evalbutton" type="button" value="eval" style="
-    font-family: 'Programma', mono;
+    font-family: 'Programma', monospace;
     padding-left: 2em;
     padding-right: 2em;">
 </p>
@@ -25,8 +25,8 @@
 <legend>Output Box</legend>
 <textarea id="outputbox" style="
     box-sizing: content-box;
-    font-family: 'Programma', mono;
-    height: 2in;
+    font-family: 'Programma', monospace;
+    height: 3in;
     overflow: auto;
     padding: 1em;
     width: 95%;">It comes out here.</textarea>
@@ -40,10 +40,13 @@ var myEval = document.getElementById("evalbutton");
 myInput.focus();
 myInput.select();
 
-myEval.onclick = function (e) {
-    myOutput.value = eval(myInput.value);
-    myInput.focus();
-    myInput.select();
-};
+    myEval.onclick = function (e) {
+        try {
+        myOutput.value = eval(myInput.value);
+        } catch (error) {
+            myOutput.value = error;
+        }
+        myInput.focus();
+        myInput.select();
+    };
 </script>
-
