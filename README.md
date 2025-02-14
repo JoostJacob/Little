@@ -12,8 +12,9 @@ Or use (define my_atom (quote atom)) and (define my_list (quote '(atom1 atom2)))
 Tyical usage: (define my_atom 'atom), (define my_list '(atom1 atom2))<br>
 <br>
 Surprises:<br>
-(isList null) --> true (correct). (isList '()) --> false (?)<br>
-(isList (quote ())) --> false (?). (isList (quote '())) --> true (?).<br>
+(isList '()): false. This is different from The Little Schemer book p.5 top.
+(isList null): true, (isList (quote ())): false, (isList (quote '())): true, (isNull null): false.<br>
+null is already defined in JavaScript and isList is implemented as Array.isArray()<br>
 <br>
 When calling car or cdr with something else than a non-empty list it does not always return error. 
 E.g. (cdr 'hotdog) --> o<br>
