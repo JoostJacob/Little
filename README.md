@@ -12,8 +12,9 @@ Or use (define my_atom (quote atom)) and (define my_list (quote '(atom1 atom2)))
 Typical usage: (define my_atom 'atom), (define my_list '(atom1 atom2))<br>
 <br>
 Note that null is already defined in JavaScript and isList is implemented as Array.isArray()<br>
+<br>
 Surprises:<br>
-(isList '()): false. (isList null): true. Crockford also mentions null for '() on his site.
+(isList '()): false. (isList null): true. Crockford also mentions using null for '() on his site.<br>
 (isList (quote ())): false, (isList (quote '())): true.<br>
 <br>
 (isNull null): false, (isNull '()): true.<br>
