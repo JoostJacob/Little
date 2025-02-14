@@ -11,11 +11,12 @@ A quote must be a real quote. On iPad turn off smart quotes: Go to Settings - Ge
 Or use (define my_atom (quote atom)) and (define my_list (quote '(atom1 atom2))).<br>
 Typical usage: (define my_atom 'atom), (define my_list '(atom1 atom2))<br>
 <br>
+Note that null is already defined in JavaScript and isList is implemented as Array.isArray()<br>
 Surprises:<br>
-(isList '()): false. This is different from The Little Schemer book p.5 top.<br>
+(isList '()): false. (isList null): true. Crockford also mentions null for '() on his site.
+(isList (quote ())): false, (isList (quote '())): true.<br>
 <br>
-(isList null): true, (isList (quote ())): false, (isList (quote '())): true, (isNull null): false.<br>
-null is already defined in JavaScript and isList is implemented as Array.isArray()<br>
+(isNull null): false, (isNull '()): true.<br>
 <br>
 When calling car or cdr with something else than a non-empty list it does not always return error. 
 E.g. (cdr 'hotdog): o<br>
