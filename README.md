@@ -12,12 +12,11 @@ Or use (define my_atom (quote atom)) and (define my_list (quote '(atom1 atom2)))
 Typical usage: (define my_atom 'atom), (define my_list '(atom1 atom2))<br>
 <br>
 Note that null is already defined in JavaScript, isList is implemented as Array.isArray(),<br>
-quote is implemented as car(cdr(l)).<br>
-Scheme 'a has to be transformed to "a", and '(a b c) to ["a", ["b", ["c"]]].
+quote is implemented as car(cdr(l)), cons(a, d) as [a, d];<br>
 <br>
 Surprises:<br>
-(isList null): true<br>
-(isNull null): false but (isNull '()): true.<br>
+(isList null): true, but (isLis '()): false<br>
+(isNull null): false, but (isNull '()): true.<br>
 <br>
 When calling car or cdr with something else than a non-empty list it does not always return error. 
 E.g. (cdr 'hotdog): o<br>
