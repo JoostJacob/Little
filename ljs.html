@@ -9,7 +9,17 @@
     height: 3in;
     overflow: auto;
     padding: 1em;
-    width: 95%;">(cdr '(1, bar, 3))
+    width: 95%;">(define l2 '(bacon and eggs))
+(define isLat2
+  (lambda (l)
+    (cond
+      ((isNull) #t)
+      ((isList (car lat)) #f)
+      ((isLat (cdr lat)))
+    )
+  )
+)
+(isLat2 l2)
 </textarea>
 </fieldset>
 
