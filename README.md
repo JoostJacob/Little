@@ -17,7 +17,7 @@ Typical usage: (define my_atom 'atom), (define my_list '(atom1 atom2))<br>
 <br>
 Surprises:<br>
 (isList '()): false.<br>
-(else ...) in cond not working, have to work around with some expression always yielding true.
+(else ...) in cond doesn't work, instead use some expression always yielding true.<br>
 <br>
 When calling car or cdr with something else than a non-empty list it does not always return error. 
 E.g. (cdr 'hotdog): o<br>
