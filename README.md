@@ -7,6 +7,9 @@ Can it also be done for
 Javascript sandbox <a href="https://joostjacob.github.io/Little/evaljs.html">here</a>.<br>
 <br>
 <a href="https://www.crockford.com/little.html">The Little Javascripter by Douglas Crockford</a> hosted <a href="https://joostjacob.github.io/Little/ljs.html">here</a>.<br>
+<br>
+Unfortunately else is not working in a cond expression, but (1 === 1) works.
+<br>
 A quote must be a real quote. On iPad turn off smart quotes: Go to Settings - General - Keyboard, and toggle off "Smart Punctuation".<br>
 Or use (define my_atom (quote atom)) and (define my_list (quote '(atom1 atom2))).<br>
 Typical usage: (define my_atom 'atom), (define my_list '(atom1 atom2))<br>
