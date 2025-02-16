@@ -9,16 +9,14 @@
     height: 3in;
     overflow: auto;
     padding: 1em;
-    width: 95%;">(define l2 '(bacon and eggs))
-(define isLat2
+    width: 95%;">(define isLat2
   (lambda (l)
     (cond
-      ((isNull) #t)
-      ((isList (car lat)) #f)
-      ((isLat (cdr lat)))
-    )
-  )
-)
+      ((isNull l) #t)
+      ((isAtom (car l)) (isLat2 (cdr l)))
+      ((gt 2 1) #f)
+    )))
+(define l2 '(else not working but (gr 2 1) does))
 (isLat2 l2)
 </textarea>
 </fieldset>
