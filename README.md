@@ -10,16 +10,14 @@ Javascript sandbox <a href="https://joostjacob.github.io/Little/evaljs.html">her
 <br>
 Unfortunately else is not working in a cond expression, but (gt 2 1) does.<br>
 <br>
-A quote must be a real quote. On iPad turn off smart quotes: Go to Settings - General - Keyboard, and toggle off "Smart Punctuation".<br>
+A quote character must be a real quote. <br>
+On iPad turn off smart quotes: Go to Settings - General - Keyboard, and toggle off "Smart Punctuation".<br>
 Or use (define my_atom (quote atom)) and (define my_list (quote '(atom1 atom2))).<br>
 Typical usage: (define my_atom 'atom), (define my_list '(atom1 atom2))<br>
 <br>
-Note that null is already defined in JavaScript, isList is implemented as Array.isArray(),<br>
-quote is implemented as car(cdr(l)), cons(a, d) as [a, d];<br>
-<br>
 Surprises:<br>
-(isList null): true, but (isLis '()): false<br>
-(isNull null): false, but (isNull '()): true.<br>
+(isList '()): false.<br>
+(else ...) in cond not working, have to work around with some expression always yielding true.
 <br>
 When calling car or cdr with something else than a non-empty list it does not always return error. 
 E.g. (cdr 'hotdog): o<br>
