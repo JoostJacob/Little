@@ -40,7 +40,7 @@ function isBoolean(a) {
 }
 
 function isNull(a) {
-    return a === undefined || a === null;
+    return a === undefined || a === null || a.length === 0;
 }
 
 function isEq(s, t) {
