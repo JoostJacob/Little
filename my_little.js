@@ -1,40 +1,27 @@
 // my_little.js
 // s-list is a JavaScript Array serving as S-expression, meaning an 
-// s-list is composed of cons's.
+// s-list is built with cons's.
 // 250217 added undefined results to car cdr and cons.
-// 250218 added [a] in cons for consing to empty s-list [].
 
 // In TLS defined only for non-empty s-lists
 function car(s) {
-    return Array.isArray(s) && s.length > 0
-    ? s[0]
-    : undefined;
+    return s[0];
 }
 
 // In TLS defined only for non-empty s-lists
 function cdr(s) {
-    return Array.isArray(s) && s.length > 0
-    ? s[1]
-    : undefined;
+    return s[1];
 }
 
 // defined only for s-lists
 // added Array.isArry(s) && s.length === 0, for isNull([]);
 function isNull(s) {
-    return s === undefined || 
-           s === null || 
-           Array.isArray(s) && s.length === 0;
+    return s === undefined || s === null;
 }
 
 // In TLS the 2nd argument must be an s-list
 function cons(a, s) {
-    return Array.isArray(s)
-    ? (
-        isNull(s)
-        ? [a]  // this case missing on Crockford site !
-        : [a, s]
-      )    
-    : undefined;
+    return [a, s];
 }
 
 function isAtom(a) {
@@ -86,14 +73,15 @@ function isLat (l) {
     : isLat(cdr(l));
 }
                 
+
 // Produce a printable presentation of an s-expression
 
-function sx2str(x) {
+function p(x) {
     var r;
     if (isList(x)) {
         r = "(";
         do {
-            r += sx2str(car(x)) + " ";
+            r += p(car(x)) + " ";
             x = cdr(x);
         } while (isList(x));
         if (r.charAt(r.length - 1) === " ") {
@@ -110,10 +98,12 @@ function sx2str(x) {
     return x;
 }
 
-// Produce an array of s-expressions from a source string.
 var rx_token = /\s*([\(\)']|[^\s()']+)?/gmy;
 
-var c2sx_deep = function (source) {
+// Produce an array of s-expressions from a source string.
+// The source string must be a scheme list in parens like (hi).
+
+var s = function (source) {
     var result = [];
     var expr;
     var num;
@@ -169,15 +159,8 @@ var c2sx_deep = function (source) {
     }())
 };
 
-function c2sx(source) {
-    var result = c2sx_deep(source);
-    return Array.isArray(result)
-           ? result[0]
-           : result;
+function c2sx(codestr) {
+    return s(codestr)[0];
 }
 
-var goed = c2sx("(a (b))"); // sx2str geeft goed terug
-
-
-
-
+var fout = c2sx("(a (b))"); // p(fout) heeft extra haakjes
