@@ -88,12 +88,12 @@ function isLat (l) {
                 
 // Produce a printable presentation of an s-expression
 
-function print_sx(x) {
+function sx2str(x) {
     var r;
     if (isList(x)) {
         r = "(";
         do {
-            r += print_sx(car(x)) + " ";
+            r += sx2str(car(x)) + " ";
             x = cdr(x);
         } while (isList(x));
         if (r.charAt(r.length - 1) === " ") {
@@ -113,7 +113,7 @@ function print_sx(x) {
 // Produce an array of s-expressions from a source string.
 var rx_token = /\s*([\(\)']|[^\s()']+)?/gmy;
 
-var c2sx = function (source) {
+var c2sx_deep = function (source) {
     var result = [];
     var expr;
     var num;
@@ -169,16 +169,14 @@ var c2sx = function (source) {
     }())
 };
 
-var ap5 = c2sx("(a b c)");
-var bp5 = cons("x", cons("y", ["z"]));
-var cp5 = cons(ap5, bp5);
-var ap7 = "peanut";
-var lp7 = cons("butter", cons("and", ["jelly"]));
-var sp9 = "a";
-var lp9 = cons(cons("b", []), cons("c",["d"]));
-var lp13 = cons("beans", cons("beans", cons("we", 
-                cons("need", cons("jelly", ["beans"])))));
+function c2sx(source) {
+    var result = c2sx_deep(source);
+    return Array.isArray(result)
+           ? result[0]
+           : result;
+}
 
+var goed = c2sx("(a (b))"); // sx2str geeft goed terug
 
 
 
