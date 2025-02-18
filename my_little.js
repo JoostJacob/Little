@@ -13,8 +13,8 @@ function cdr(s) {
     return s[1];
 }
 
-// defined only for s-lists
-// added Array.isArry(s) && s.length === 0, for isNull([]);
+// In TLS defined only for s-lists
+// isNull([]) -> false, isNull(null) -> true.
 function isNull(s) {
     return s === undefined || s === null;
 }
@@ -98,12 +98,15 @@ function p(x) {
     return x;
 }
 
-var rx_token = /\s*([\(\)']|[^\s()']+)?/gmy;
 
 // Produce an array of s-expressions from a source string.
 // The source string must be a scheme list in parens like (hi).
 
-var s = function (source) {
+function c2sx(codestr) {
+
+  var rx_token = /\s*([\(\)']|[^\s()']+)?/gmy;
+  
+  var s = function (source) {
     var result = [];
     var expr;
     var num;
@@ -157,10 +160,7 @@ var s = function (source) {
             return result;
         }
     }())
-};
-
-function c2sx(codestr) {
-    return s(codestr)[0];
+  }
+  return s(codestr)[0]; // Crockford's s() nested 1 too deep
 }
 
-var fout = c2sx("(a (b))"); // p(fout) heeft extra haakjes
