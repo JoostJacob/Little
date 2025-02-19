@@ -1,7 +1,6 @@
 // my_little.js
-// s-list is a JavaScript Array serving as S-expression, meaning an 
-// s-list is built with cons's.
-// 250217 added undefined results to car cdr and cons.
+// Javascript functions for Chapter 1 of The Little Schemer 4th ed.
+// To create an s-expression use str2sx, to view it use sx2str.
 
 // In TLS defined only for non-empty s-lists
 function car(s) {
@@ -65,23 +64,15 @@ function sub1(n) {
     return n - 1;
 }
 
-function isLat (l) {
-    return isNull(l)
-    ? true
-    : !isAtom(car(l))
-    ? false
-    : isLat(cdr(l));
-}
-                
 
 // Produce a printable presentation of an s-expression
 
-function p(x) {
+function sx2str(x) {
     var r;
     if (isList(x)) {
         r = "(";
         do {
-            r += p(car(x)) + " ";
+            r += sx2str(car(x)) + " ";
             x = cdr(x);
         } while (isList(x));
         if (r.charAt(r.length - 1) === " ") {
@@ -102,7 +93,7 @@ function p(x) {
 // Produce an array of s-expressions from a source string.
 // The source string must be a scheme list in parens like (hi).
 
-function c2sx(codestr) {
+function str2sx(codestr) {
 
   var rx_token = /\s*([\(\)']|[^\s()']+)?/gmy;
   
@@ -163,4 +154,3 @@ function c2sx(codestr) {
   }
   return s(codestr)[0]; // Crockford's s() nested 1 too deep
 }
-
