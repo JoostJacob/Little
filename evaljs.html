@@ -10,11 +10,12 @@
     overflow: auto;
     padding: 1em;
     width: 95%;">
-var l = c2sx("(a b)");
-var l1 = c2sx("(a b)");
-var l2 = c2sx("(a b)");
+var l = c2sx("(a b)"); // Use function c2sx to create an s-expression (in Scheme)
+var l1 = c2sx("(a)");
+var l2 = c2sx("()");   // creates an empty list. Also null or undefined works.
+var str_s_expression = "(((how) are) ((you) (doing so)) far)";
+var s = c2sx(str_s_expression);
 var a = "a";  var a1 = "b";  var a2 = c2sx("c");
-var s = c2sx("(a b)");
 var n = 1; var n1 = 2; var n2 = c2sx("3");
 const list_empty = null;
 function sx_show_str(sx){
