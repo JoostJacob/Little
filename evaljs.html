@@ -10,14 +10,17 @@
     overflow: auto;
     padding: 1em;
     width: 95%;">
-var food = "only use c2sx to build s-expressions !";
-const list_empty = c2sx("()");  // this is NOT the same as [], see below, it has undefined as value.
-var list_ok = cons("a", list_empty);
-var list_wrong = cons("a", []);
+var l = c2sx("(a b)");
+var l1 = c2sx("(a b)");
+var l2 = c2sx("(a b)");
+var a = "Harry";  var a1 = "a";  var a2 = "b";
+var s = c2sx("(a b)");
+var n = 5; var n1 = 1; var n2 = 2;
+const list_empty = null;
 function sx_show_str(sx){
     return p(sx) + " -> " + JSON.stringify(sx);
 }
-"list_ok: " + sx_show_str(list_ok) + "\n" + "list_wrong: " + sx_show_str(list_wrong);
+sx_show_str(l);    
   </textarea>
 </fieldset>
 
