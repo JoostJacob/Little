@@ -13,8 +13,11 @@ Do not use "or" in Chapter 2, instead use || in Javascript. Same for "and" and &
 All the solutions in Javascript up to Chapter 10 by Douglas Crockford are
 <a href="https://joostjacob.github.io/Little/little.js">here</a>.<br>
 <br>
+<hr>
+<br>
+If you want to try Scheme:<br>=
 <a href="https://www.crockford.com/little.html">The Little Javascripter by Douglas Crockford</a> 
-hosted <a href="https://joostjacob.github.io/Little/ljs.html">here</a>.<br>
+is hosted <a href="https://joostjacob.github.io/Little/ljs.html">here</a>.<br>
 You can try Scheme code there in the Input Box.<br>
 Unfortunately else is not working in a cond expression, but (gt 2 1) does. I am working on a solution.<br>
 <br>
