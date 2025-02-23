@@ -10,19 +10,19 @@
     overflow: auto;
     padding: 1em;
     width: 95%;">
-var l = str2sx("(a b)");  // Use function str2sx to create an s-expression (in Scheme)
-var l1 = str2sx("(a)");   // Use function sx2str to view it.
-var l2 = str2sx("()");    // Empty list. Also "l2 = null" or "l2 = undefined" works.
-var str_s_expression = "(((how) are) ((you) (doing so)) far)";
-var s = str2sx(str_s_expression);
-var a = "a";  var a1 = "b";  var a2 = str2sx("c");
-var n = 1; var n1 = 2; var n2 = str2sx("3");
-const list_empty = null;
-// sx2str; // use this to see the text of function sx2str.
-function sx_show_str(sx){
-    return sx2str(sx) + " -> " + JSON.stringify(sx);
-}
-sx_show_str(s);
+function rember(a, lat) {
+    return (
+        isNull(lat)
+        ? null
+        : (
+            isEq(a, car(lat))
+            ? cdr(lat)
+            : cons(car(lat), rember(a, cdr(lat)))
+        )
+    );
+}    
+var s = str2sx("(how are you doing so far?)");
+sx2str(rember("are",  s));
   </textarea>
 </fieldset>
 
