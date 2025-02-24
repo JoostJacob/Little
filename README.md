@@ -8,8 +8,10 @@ Javascript sandbox <a href="https://joostjacob.github.io/Little/evaljs.html">her
 in the Input Box and start recursing!<br>
 All primitives from Chapter 1 "Toys" are available so you can do the exercises<br>
 in Chapter 2 "Do It, Do It Again, and Again, and Again..."<br>
-and the exercises in Chapter 3 "Cons the Magnificent".<br>
+and the exercises in Chapter 3 "Cons the Magnificent" and in Chapter 4 "Numbers Games".<br>
 Do not use "or" in Chapter 2, instead use || in Javascript. Same for "and" and &&.<br>
+For Chapter 5 "*Oh My Gawd*: It's Full of Stars", you need the solutions from Chapters 1-4, so use
+<a href="https://joostjacob.github.io/Little/chapter5.html">this</a> sandbox.<br>
 All the solutions in Javascript up to Chapter 10 by Douglas Crockford are
 <a href="https://joostjacob.github.io/Little/little.js">here</a>.<br>
 <hr>
