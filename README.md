@@ -7,8 +7,7 @@ Can it also be done for
 Javascript sandbox <a href="https://joostjacob.github.io/Little/toys.html">here</a>. Put your Javascript code 
 in the Input Box and start recursing!<br>
 All primitives from Chapter 1 "Toys" are available so you can do the exercises<br>
-in Chapter 2 "Do It, Do It Again, and Again, and Again..."<br>
-and the exercises in Chapter 3 "Cons the Magnificent" and in Chapter 4 "Numbers Games".<br>
+in Chapter 2 "Do It, Do It Again, and Again, and Again..." and the exercises in Chapter 3 "Cons the Magnificent" and in Chapter 4 "Numbers Games".<br>
 Do not use "or" in Chapter 2, instead use || in Javascript. Same for "and" and &&.<br>
 For Chapter 5 "*Oh My Gawd*: It's Full of Stars", you need the solutions from Chapters 1-4, so use
 <a href="https://joostjacob.github.io/Little/chapter5.html">this</a> sandbox.<br>
@@ -17,6 +16,7 @@ All the solutions in Javascript up to Chapter 10 by Douglas Crockford are
 <br>
 Surprises:<br>
 To view the function definition of e.g. car you can type "car;" as the last line in the Input Box.<br>
+<br>
 car(str2sx("(a b c)"), "d");  // -> "a". Should give an error because car has two arguments here but Javascript allows it.<br>
 So be very careful to not forget parens in Javascript.<br>
 <hr>
@@ -32,5 +32,4 @@ Or use (define my_atom (quote atom)) and (define my_list (quote '(atom1 atom2)))
 Typical usage: (define my_atom 'atom), (define my_list '(atom1 atom2))<br>
 <br>
 Surprises:<br>
-(isList '()): false.<br>
-(else ...) in cond doesn't work, instead use some expression always yielding true.
+(isList '()): false.
