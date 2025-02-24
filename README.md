@@ -14,6 +14,11 @@ For Chapter 5 "*Oh My Gawd*: It's Full of Stars", you need the solutions from Ch
 <a href="https://joostjacob.github.io/Little/chapter5.html">this</a> sandbox.<br>
 All the solutions in Javascript up to Chapter 10 by Douglas Crockford are
 <a href="https://joostjacob.github.io/Little/little.js">here</a>.<br>
+<br>
+Surprises:<br>
+To view the function definition of e.g. car you can type "car;" as the last line in the Input Box.<br>
+car(str2sx("(a b c)"), "d");  // -> "a". Should give an error because car has two arguments here but Javascript allows it.<br>
+So be very careful to not forget parens in Javascript.<br>
 <hr>
 If you want to try Scheme:<br>
 <a href="https://www.crockford.com/little.html">The Little Javascripter by Douglas Crockford</a> 
@@ -28,7 +33,4 @@ Typical usage: (define my_atom 'atom), (define my_list '(atom1 atom2))<br>
 <br>
 Surprises:<br>
 (isList '()): false.<br>
-(else ...) in cond doesn't work, instead use some expression always yielding true.<br>
-<br>
-When calling car or cdr with something else than a non-empty list it does not always return error. 
-E.g. (cdr 'hotdog): o<br>
+(else ...) in cond doesn't work, instead use some expression always yielding true.
