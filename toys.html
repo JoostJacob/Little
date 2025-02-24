@@ -1,0 +1,67 @@
+
+<script src="toys.js"></script>
+
+<fieldset>
+<legend>Input Box</legend>
+  <textarea id="inputbox" style="
+    box-sizing: content-box;
+    font-family: 'Programma', monospace;
+    height: 3in;
+    overflow: auto;
+    padding: 1em;
+    width: 95%;">
+// Primitives from Chapter 1 "Toys"
+// - `car`: First element of a list
+// - `cdr`: Rest of a list
+// - `cons`: Constructs a list
+// - `isNull`: Checks for empty list
+// - `isEq`: Compares two values (must be atoms, not lists)
+// - `isAtom`: Checks if not a list (must be a number or a string or a boolean)
+
+function example_rember(a, lat) {
+  return isNull(lat)
+  ? null
+  : isEq(a, car(lat))
+    ? cdr(lat)
+    : cons(car(lat), example_rember(a, cdr(lat)));
+} 
+var s = str2sx("(how are you doing so far?)");
+sx2str(rember("are",  s));</textarea>
+</fieldset>
+
+<p align="center">
+  <input id="evalbutton" type="button" value="eval" style="
+    font-family: 'Programma', monospace;
+    padding-left: 2em;
+    padding-right: 2em;">
+</p>
+
+<fieldset>
+<legend>Output Box</legend>
+<textarea id="outputbox" style="
+    box-sizing: content-box;
+    font-family: 'Programma', monospace;
+    height: 3in;
+    overflow: auto;
+    padding: 1em;
+    width: 95%;">It comes out here.</textarea>
+</fieldset>
+
+<script>
+var myInput = document.getElementById("inputbox");
+var myOutput = document.getElementById("outputbox");
+var myEval = document.getElementById("evalbutton");
+
+myInput.focus();
+myInput.select();
+
+    myEval.onclick = function (e) {
+        try {
+        myOutput.value = eval(myInput.value);
+        } catch (error) {
+            myOutput.value = error;
+        }
+        myInput.focus();
+        myInput.select();
+    };
+</script>
