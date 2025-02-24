@@ -4,7 +4,7 @@ the great SICP textbook</a>.<br>
 Can it also be done for 
 <a href="https://mitpress.mit.edu/little-books-on-big-topics-in-computer-science/">the Little Books</a>?<br>
 <br>
-Javascript sandbox <a href="https://joostjacob.github.io/Little/evaljs.html">here</a>. Put your Javascript code 
+Javascript sandbox <a href="https://joostjacob.github.io/Little/toys.html">here</a>. Put your Javascript code 
 in the Input Box and start recursing!<br>
 All primitives from Chapter 1 "Toys" are available so you can do the exercises<br>
 in Chapter 2 "Do It, Do It Again, and Again, and Again..."<br>
