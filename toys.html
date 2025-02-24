@@ -26,7 +26,7 @@ function example_rember(a, lat) {
     : cons(car(lat), example_rember(a, cdr(lat)));
 } 
 var s = str2sx("(how are you doing so far?)");
-sx2str(rember("are",  s));</textarea>
+sx2str(example_rember("are",  s));</textarea>
 </fieldset>
 
 <p align="center">
