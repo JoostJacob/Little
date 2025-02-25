@@ -18,9 +18,6 @@ All the solutions in Javascript up to Chapter 10 by Douglas Crockford are
 <br>
 Surprises:<br>
 To view the function definition of e.g. car you can type "car;" as the last line in the Input Box.<br>
-<br>
-car(str2sx("(a b c)"), "d");  // -> "a". Should give an error because car has two arguments here but Javascript allows it.<br>
-So be very careful to not forget parens in Javascript.<br>
 <hr>
 If you want to try Scheme:<br>
 <a href="https://www.crockford.com/little.html">The Little Javascripter by Douglas Crockford</a> 
