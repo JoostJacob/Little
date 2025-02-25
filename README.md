@@ -15,7 +15,7 @@ All primitives (car cdr cons isAtom isEq isNull) from Chapter 1 "Toys" are avail
 Do not use "or" in Chapter 2, instead use || in Javascript. Same for "and" and &&.<br>
 <br>
 For Chapter 5 "*Oh My Gawd*: It's Full of Stars", you need the solutions from Chapters 1-4, so use
-the advanced sandbox.<br>
+the advanced sandbox. Use isEq(a, b) for non-numeric atoms, isEqn(n, m) for numbers, and isEqan(a, b) for any two atoms.<br>
 <br>
 All the solutions in Javascript up to Chapter 10 by Douglas Crockford are
 <a href="https://joostjacob.github.io/Little/little.js">here</a>.<br>
