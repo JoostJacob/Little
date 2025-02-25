@@ -4,10 +4,10 @@ the great SICP textbook</a>.<br>
 Can it also be done for 
 <a href="https://mitpress.mit.edu/little-books-on-big-topics-in-computer-science/">the Little Books</a>?<br>
 <br>
-Javascript sandbox <a href="https://joostjacob.github.io/Little/toys.html">here</a>. Put your Javascript code 
-in the Input Box and start recursing!<br>
+- **Chapter 1 Exercises**: Try them in the [basic sandbox](https://joostjacob.github.io/Little/toys.html).
+- **Chapter 5 and Beyond**: Use the [advanced sandbox](https://joostjacob.github.io/Little/chapter5.html) with solutions from Chapters 2–4 included.
 <br>
-All primitives from Chapter 1 "Toys" are available so you can do the exercises in Chapter 2 "Do It, Do It Again, and Again, and Again..." and the exercises in Chapter 3 "Cons the Magnificent" and in Chapter 4 "Numbers Games".<br>
+All primitives (car cdr cons isAtom isEq isNull) from Chapter 1 "Toys" are available in the basic sandbox so you can do the exercises in Chapter 2 "Do It, Do It Again, and Again, and Again..." and the exercises in Chapter 3 "Cons the Magnificent" and in Chapter 4 "Numbers Games".<br>
 Do not use "or" in Chapter 2, instead use || in Javascript. Same for "and" and &&.<br>
 <br>
 For Chapter 5 "*Oh My Gawd*: It's Full of Stars", you need the solutions from Chapters 1-4, so use
