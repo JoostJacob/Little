@@ -8,8 +8,8 @@ Can it also be done for
 - **Chapter 5 and Beyond**: Use the [advanced sandbox](https://joostjacob.github.io/Little/chapter5.html) with solutions from Chapters 2–4 included.
 <br>
 <br>
-<a href="https://www.crockford.com/little.html">The Little Javascripter by Douglas Crockford</a> has a table with transformation rules from Scheme to Javascript. For instance we use null instead of '() in Scheme. And cdr(a, s) instead of (cdr a s).
-
+The <a href="https://www.crockford.com/little.html">Little Javascripter by Douglas Crockford</a> has a table 
+with transformation rules from Scheme to Javascript. For instance we use null instead of '() in Scheme. And cdr(a, s) instead of (cdr a s).
 <br>
 All primitives (car cdr cons isAtom isEq isNull) from Chapter 1 "Toys" are available in the basic sandbox so you can do the exercises in Chapter 2 "Do It, Do It Again, and Again, and Again..." and the exercises in Chapter 3 "Cons the Magnificent" and in Chapter 4 "Numbers Games".<br>
 Do not use "or" in Chapter 2, instead use || in Javascript. Same for "and" and &&.<br>
