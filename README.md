@@ -26,15 +26,16 @@ All the solutions in Javascript up to Chapter 10 by Douglas Crockford are
 <a href="https://joostjacob.github.io/Little/little.js">here</a>.<br>
 <br>
 Surprises:<br>
-View function code of e.g. car you can type "car;" as the last line in the Input Box.<br>
+To inspect the function code of e.g. car you can type "car;" as the last line in the Input Box.<br>
 <hr>
 If you want to try Scheme:<br>
 <a href="https://www.crockford.com/little.html">The Little Javascripter by Douglas Crockford</a> 
-is also hosted <a href="https://joostjacob.github.io/Little/ljs.html">here</a>. You can try Scheme code there in the Input Box.<br>
+is also hosted <a href="https://joostjacob.github.io/Little/ljs.html">here</a>. 
+You can try Scheme code there in the Input Box. 
 Unfortunately else is not working in a cond expression, but #t does. I am working on a solution.<br>
 <br>
 In Scheme a quote character must be a real quote. <br>
-On iPad turn off smart quotes: Go to Settings - General - Keyboard, and toggle off "Smart Punctuation".<br>
+On iPad turn off smart quotes: Go to Settings - General - Keyboard, and toggle off "Smart Punctuation". 
 Or use (define my_atom (quote atom)).<br>
 <br>
 Surprises:<br>
