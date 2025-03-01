@@ -8,8 +8,8 @@ Can it also be done for
 Pay attention to str2sx(my_string) and sx2str(my_s_expression) in the example code in the Input Box. 
 They are convenience functions for entering and viewing s-expressions. 
 If you really want to inspect the Javascript implementation use JSON.stringify(my_s_expression).
-- **Chapter 5 and Beyond**: Use the [advanced sandbox](https://joostjacob.github.io/Little/chapter5.html) with solutions from Chapters 2–4 included.
-
+- **Chapter 5 and 6**: Use the [advanced sandbox](https://joostjacob.github.io/Little/chapter5.html) with solutions from Chapters 2–4 included.
+- **Chapter 7 and Beyond**: Use the [Equal Sandbox](https://joostjacob.github.io/Little/chapter5.html) with isEqual from Chapter 5 replacing isEq.
 <br>
 The <a href="https://www.crockford.com/little.html">Little Javascripter by Douglas Crockford</a> has a table 
 with transformation rules from Scheme to Javascript. For instance we use null instead of '() in Scheme. 
