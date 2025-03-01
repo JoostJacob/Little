@@ -4,12 +4,13 @@ the great SICP textbook</a>.<br>
 Can it also be done for 
 <a href="https://mitpress.mit.edu/little-books-on-big-topics-in-computer-science/">the Little Books</a>?<br>
 <br>
-- **Chapter 1 Exercises**: Try them in the [basic sandbox](https://joostjacob.github.io/Little/toys.html).<br>
+- **Chapter 1-4 Exercises**: Try them in the [basic sandbox](https://joostjacob.github.io/Little/toys.html).<br>
 Pay attention to str2sx(my_string) and sx2str(my_s_expression) in the example code in the Input Box. 
 They are convenience functions for entering and viewing s-expressions. 
 If you really want to inspect the Javascript implementation use JSON.stringify(my_s_expression).
 - **Chapter 5 and 6**: Use the [advanced sandbox](https://joostjacob.github.io/Little/chapter5.html) with solutions from Chapters 2–4 included.
 - **Chapter 7 and Beyond**: Use the [Equal Sandbox](https://joostjacob.github.io/Little/chapter7.html) with isEqual from Chapter 5 replacing isEq.
+<br>
 <br>
 The <a href="https://www.crockford.com/little.html">Little Javascripter by Douglas Crockford</a> has a table 
 with transformation rules from Scheme to Javascript. For instance we use null instead of '() in Scheme. 
