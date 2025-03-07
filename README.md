@@ -4,7 +4,7 @@ the great SICP textbook</a>.<br>
 Can it also be done for 
 <a href="https://mitpress.mit.edu/little-books-on-big-topics-in-computer-science/">the Little Books</a>?<br>
 <br>
-- **Chapter 1-4 Exercises**: Try them in the [basic sandbox](https://joostjacob.github.io/Little/toys.html).<br>
+- **The Little Schemer Chapter 1-4 Exercises**: Try them in the [basic sandbox](https://joostjacob.github.io/Little/toys.html).<br>
 Pay attention to str2sx(my_string) and sx2str(my_s_expression) in the example code in the Input Box. 
 They are convenience functions for entering and viewing s-expressions. 
 If you really want to inspect the Javascript implementation use JSON.stringify(my_s_expression).
