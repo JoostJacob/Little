@@ -17,11 +17,11 @@ The <a href="https://www.crockford.com/little.html">Little Javascripter by Dougl
 with transformation rules from Scheme to Javascript. For instance we use null instead of '() in Scheme. 
 And cdr(a, s) instead of (cdr a s).<br>
 <br>
-All primitives (car cdr cons isAtom isEq isNull) from Chapter 1 "Toys" are available in the basic sandbox so you can do the exercises in Chapter 2 "Do It, Do It Again, and Again, and Again..." and the exercises in Chapter 3 "Cons the Magnificent" and in Chapter 4 "Numbers Games".<br>
+All primitives (car cdr cons isAtom isEq isNull) from Chapter 1 "Toys" are available in Sandbox 1 so you can do the exercises in Chapter 2 "Do It, Do It Again, and Again, and Again..." and the exercises in Chapter 3 "Cons the Magnificent" and in Chapter 4 "Numbers Games".<br>
 Do not use "or" in Chapter 2, instead use || in Javascript. Same for "and" and &&.<br>
 <br>
-For Chapter 5 "*Oh My Gawd*: It's Full of Stars", you need the solutions from Chapters 1-4, so use
-the advanced sandbox. Use isEq(a, b) for non-numeric atoms, isEqn(n, m) for numbers, and isEqan(a, b) for any two atoms. 
+For Chapter 5 "*Oh My Gawd*: It's Full of Stars", you need the solutions from Chapters 1-4, so use Sandbox 5. 
+Use isEq(a, b) for non-numeric atoms, isEqn(n, m) for numbers, and isEqan(a, b) for any two atoms. 
 Spoiler alert: Chapter 5 brings isEqual(s1, s2), for any two s-expressions.<br>
 <br>
 All the solutions in Javascript up to Chapter 10 by Douglas Crockford are
