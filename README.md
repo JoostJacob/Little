@@ -10,7 +10,7 @@ They are convenience functions for entering and viewing s-expressions.
 If you really want to inspect the Javascript implementation use JSON.stringify(my_s_expression).
 - **Chapter 5 and 6**: Use the [advanced sandbox](https://joostjacob.github.io/Little/chapter5.html) with solutions from Chapters 2–4 included.
 - **Chapter 7 and 8**: Use the [Equal Sandbox](https://joostjacob.github.io/Little/chapter7.html) with isEqual from Chapter 5 replacing isEq.
-- **Chapter 9 and Beyond**: Use the [Build Sandbox](https://joostjacob.github.io/Little/chapter9.html) with answers from Chapter 7 included.
+- **Chapter 9 and Beyond**: Use the [Build Sandbox](https://joostjacob.github.io/Little/chapter9.html) with answers from Chapter 7 and 8 included.
 <br>
 <br>
 The <a href="https://www.crockford.com/little.html">Little Javascripter by Douglas Crockford</a> has a table 
