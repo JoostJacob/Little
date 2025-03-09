@@ -32,7 +32,7 @@ function isPair(lat) {
   : isNull(cdr(cdr(lat)));
 }
 
-function align(pora) {
+function align(pora) {  // pora for Pair OR Atom
   return isAtom(pora)
   ? pora
   : isPair(first(pora))
@@ -40,8 +40,8 @@ function align(pora) {
   : build(first(pora), align(second(pora)));
 }
 
-function length_star_ch9(pora) {  // verkeerd antwoord voor ((a b c) d) ==> 3 !!
-  return isAtom(pora)             // maar deze is zoals in Little Schemer
+function length_star_ch9(pora) {  
+  return isAtom(pora)
   ? 1
   : length_star_ch9(first(pora)) + length_star_ch9(second(pora));
 }
@@ -51,7 +51,6 @@ function weight(pora) {
   ? 1
   : weight(first(pora)) * 2 + weight(second(pora));
 }
-
 
 function shuffle(pora) {
   return isAtom(pora)
