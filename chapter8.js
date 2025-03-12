@@ -72,7 +72,7 @@ function atom2function(x) {
   : power;
 }
 
-function value(nexp) {
+function get_value(nexp) {  // do not use name "value" or Ch.10's value will be bad
   return isAtom(nexp)
   ? nexp
   : atom2function(car(nexp))(car(cdr(nexp)), car(cdr(cdr(nexp))));
