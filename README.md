@@ -12,7 +12,8 @@ If you really want to inspect the Javascript implementation use JSON.stringify(m
 - **Chapter 7 and 8**: Use [Sandbox 7](https://joostjacob.github.io/Little/chapter7.html) with isEqual from Chapter 5 replacing isEq.
 - **Chapter 9 and Beyond**: Use [Sandbox 9](https://joostjacob.github.io/Little/chapter9.html) with answers from Chapter 7 and 8 included. 
 Solutions for [Chapter 8](https://joostjacob.github.io/Little/chapter8.js) and 
-[Chapter 9](https://joostjacob.github.io/Little/chapter9.js).
+[Chapter 9](https://joostjacob.github.io/Little/chapter9.js) and .
+[Chapter 10](https://joostjacob.github.io/Little/chapter10.js).
 <br>
 <br>
 The <a href="https://www.crockford.com/little.html">Little Javascripter by Douglas Crockford</a> has a table 
