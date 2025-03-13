@@ -81,12 +81,12 @@ function list_to_action(e) {
   : fapplication;
 }
 
-function value(e) {
-  return meaning(e, null);
-}
-
 function meaning(e, table) {
   return expression_to_action(e)(e, table);
+}
+
+function value(e) {
+  return meaning(e, null);
 }
 
 function fconst(e, table) {
@@ -114,7 +114,7 @@ function initial_table(name) {
 }
 
 function flambda(e, table) {
-  return build("non_primitive", cons(table, cdr(e)));
+  return build("non-primitive", cons(table, cdr(e)));
 }
 
 var table_of = first;
@@ -227,16 +227,20 @@ var vals = str2sx("((a b c)(d e f))");
 var table = extend_table(new_entry(formals_of(closure), vals), table_of(closure));
 var args = str2sx("(z x)");
 
-//sx2str(evlis(args, table));  // (6 (a b c))
-//sx2str(meaning("cons", table)); // (primitive cons)
+//sx2str(evlis(args, table));  // ==> (6 (a b c))
+//sx2str(meaning("cons", table)); // ==> (primitive cons)
 
-// sx2str(apply(meaning("cons", table), evlis(args, table)));  // (6 a b c)
-
-str = "(cdr (quote (a b c)))";
+//sx2str(apply(meaning("cons", table), evlis(args, table)));  // ==> (6 a b c)
 
 function run(code_string) {
   return sx2str(value(str2sx(code_string)));
 }
 
-run(str);
+//str = "(cdr (quote (a b c)))";
+//run(str);  // correct (b c)
 
+//str = "((lambda (n) (cond ((zero? n) #f)(else (zero? (sub1 n)))))(quote 1))"  // ==> #t
+//value(str2sx((str)));
+
+//str = "((lambda (x)(cons x (quote ())))(quote (foo bar baz)))";  // ==> ((foo bar baz))
+//run(str);
