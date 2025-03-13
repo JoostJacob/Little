@@ -13,7 +13,18 @@
     height: 3in;
     overflow: auto;
     padding: 1em;
-    width: 95%;">((lambda (x)(cons x (quote ())))(quote (foo bar baz)))</textarea>
+    width: 95%;">(((lambda (le)
+  ((lambda (f) (f f))
+   (lambda (f)
+     (le (lambda (x) ((f f) x))))))
+ (lambda (length)
+   (lambda(l)
+     (cond
+       ((null? l) 0)
+       (else (add1 (length (cdr l)))))))
+ )
+ (quote (time for a banquet))
+)</textarea>
 </fieldset>
 
 <p align="center">
