@@ -38,7 +38,6 @@ If you want to try Scheme:<br>
 <a href="https://www.crockford.com/little.html">The Little Javascripter by Douglas Crockford</a> 
 is also hosted <a href="https://joostjacob.github.io/Little/ljs.html">here</a>. 
 You can try Scheme code there in the Input Box. 
-Unfortunately else is not working in a cond expression, but #t does. I am working on a solution.<br>
 <br>
 In Scheme a quote character must be a real quote. <br>
 On iPad turn off smart quotes: Go to Settings - General - Keyboard, and toggle off "Smart Punctuation". 
