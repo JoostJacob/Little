@@ -1133,7 +1133,7 @@ expressionToAction = function expressionToAction(e) {
 
 function evcon(lines, context) {
     return (
-        isElse(questionOf(car(lines)))
+        isElse(car(lines))
         ? meaning(answerOf(car(lines)))
         : (
             meaning(questionOf(car(lines)), context)
