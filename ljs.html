@@ -14,9 +14,9 @@
     (cond
       ((isNull l) #t)
       ((isAtom (car l)) (isLat2 (cdr l)))
-      ((gt 2 1) #f)
+      (else #f)
     )))
-(define l2 '(else not working but (gt 2 1) or #t does))
+(define l2 '(1 2 3 a b c d))
 (isLat2 l2)
 </textarea>
 </fieldset>
