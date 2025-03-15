@@ -59,10 +59,10 @@ function seqRemove(nw, ls) {
   return cdr(ls);
 }
 
-var insertL = insertG(seqL);
-var insertR = insertG(seqR);
-var subst = insertG(seqS);
-var rember = insertG(seqRemove);
+let insertL = insertG(seqL);
+let insertR = insertG(seqR);
+let subst = insertG(seqS);
+let rember = insertG(seqRemove);
 
 function atom2function(x) {
   return isEq(x, "+")
