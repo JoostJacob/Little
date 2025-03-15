@@ -83,7 +83,7 @@ var length_zero = function (l) {
 }
 
 // replace eternity by function definition of length_zero, p.160
-var length_one = function (l) {
+let length_one = function (l) {
   return isNull(l)
   ? 0
   : add1(function (l) {
@@ -93,7 +93,7 @@ var length_one = function (l) {
          }(cdr(l)));
 }
 
-var length_two = function (l) {  // and again replace eternity, p.161
+let length_two = function (l) {  // and again replace eternity, p.161
   return isNull(l)
   ? 0
   : add1(function (l) {
@@ -107,7 +107,7 @@ var length_two = function (l) {  // and again replace eternity, p.161
          }(cdr(l)));
 }
 
-var length_0 = function (length_f) { // p. 162
+let length_0 = function (length_f) { // p. 162
   return function (l) {
     return isNull(l)
     ? 0
@@ -115,7 +115,7 @@ var length_0 = function (length_f) { // p. 162
   }
 }(eternity);
 
-var length_1 = function (length_f) {
+let length_1 = function (length_f) {
   return function (l) {
     return isNull(l)
     ? 0
@@ -129,7 +129,7 @@ var length_1 = function (length_f) {
     }
   }(eternity));
 
-var length_2 = function (length_f) {
+let length_2 = function (length_f) {
   return function (l) {
     return isNull(l)
     ? 0
@@ -149,7 +149,7 @@ var length_2 = function (length_f) {
       }
     }(eternity)));
 
-var len_0 = function (mk_length) {  // p.164
+let len_0 = function (mk_length) {  // p.164
   return mk_length(eternity);
 }(
   function (length) {
@@ -161,7 +161,7 @@ var len_0 = function (mk_length) {  // p.164
   }  
  );
 
-var len_1 = function (mk_length) {
+let len_1 = function (mk_length) {
   return mk_length(mk_length(eternity));
 }(
   function (length) {
@@ -173,7 +173,7 @@ var len_1 = function (mk_length) {
   }  
  );
 
-var len_3 = function (mk_length) {
+let len_3 = function (mk_length) {
   return mk_length(mk_length(mk_length(mk_length(eternity))));
 }(
   function (length) {
@@ -185,7 +185,7 @@ var len_3 = function (mk_length) {
   }  
  );
 
-var length_167 = function (mk_length) { // p.167
+let length_167 = function (mk_length) { // p.167
   return mk_length(mk_length);
 }(
   function (mk_length) {
@@ -197,7 +197,7 @@ var length_167 = function (mk_length) { // p.167
   }  
  );
 
-var length_171 = function (mk_length) {  // p.171
+let length_171 = function (mk_length) {  // p.171
   return mk_length(mk_length);
 }(function (mk_length) {
     return function(length) {
@@ -214,7 +214,7 @@ var length_171 = function (mk_length) {  // p.171
   }
  );
 
-var length_172 = function (le) {  // p. 172
+let length_172 = function (le) {  // p. 172
   return function (mk_length) {
     return mk_length(mk_length);
   }(function (mk_length) {
