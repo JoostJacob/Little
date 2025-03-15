@@ -1,5 +1,5 @@
 
-var new_entry = build;
+let new_entry = build;
 
 function lookup_in_entry_help(name, names, values, entry_f) {
   return isNull(names)
@@ -17,7 +17,7 @@ function entry_f(name) {
   return "Not Found in entry: " + name;
 }
 
-var extend_table = cons;
+let extend_table = cons;
 
 function table_f(name) {
   return "Not Found in table: " + name;
@@ -103,7 +103,7 @@ function fquote(e, table) {
   return text_of(e);
 }
 
-var text_of = second;
+let text_of = second;
 
 function fidentifier(e, table) {
   return lookup_in_table(e, table, initial_table);
@@ -117,9 +117,9 @@ function flambda(e, table) {
   return build("non-primitive", cons(table, cdr(e)));
 }
 
-var table_of = first;
-var formals_of = second;
-var body_of = third;
+let table_of = first;
+let formals_of = second;
+let body_of = third;
 
 function evcon(lines, table) {
   return isElse(question_of(car(lines)))
@@ -135,9 +135,9 @@ function isElse(x) {
   : false;
 }
 
-var question_of = first;
-var answer_of = second;
-var cond_lines_of = cdr;
+let question_of = first;
+let answer_of = second;
+let cond_lines_of = cdr;
 
 function fcond(e, table) {
   return evcon(cond_lines_of(e), table);
@@ -158,8 +158,8 @@ function fapplication(e, table) {
                evlis(arguments_of(e), table));
 }
 
-var function_of = car;
-var arguments_of = cdr;
+let function_of = car;
+let arguments_of = cdr;
 
 function isPrimitive(l) {
   return isEq(first(l), "primitive");
@@ -218,14 +218,14 @@ function apply_closure(closure, vals) {
     extend_table(new_entry(formals_of(closure), vals), table_of(closure)));
 }
 
-var closure = str2sx("((((u v w)(1 2 3))((x y z)(4 5 6)))(x y)(cons z x))");
-var vals = str2sx("((a b c)(d e f))");
+let closure = str2sx("((((u v w)(1 2 3))((x y z)(4 5 6)))(x y)(cons z x))");
+let vals = str2sx("((a b c)(d e f))");
 
 //sx2str(new_entry(formals_of(closure), vals));
 //sx2str(table_of(closure));
 
-var table = extend_table(new_entry(formals_of(closure), vals), table_of(closure));
-var args = str2sx("(z x)");
+let table = extend_table(new_entry(formals_of(closure), vals), table_of(closure));
+let args = str2sx("(z x)");
 
 //sx2str(evlis(args, table));  // ==> (6 (a b c))
 //sx2str(meaning("cons", table)); // ==> (primitive cons)
