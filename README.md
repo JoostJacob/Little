@@ -23,15 +23,13 @@ Solutions for [Chapter 9](https://joostjacob.github.io/Little/chapter9.js) and
 And of course a little Scheme [interpreter](https://joostjacob.github.io/Little/scheme10.html), without define, just like in the book.
 - **From The Seasoned Schemer**: here is [Chapter 11](https://joostjacob.github.io/Little/chapter11.js).
 <br>
+<br>
 The <a href="https://www.crockford.com/little.html">Little Javascripter by Douglas Crockford</a> has a table 
 with transformation rules from Scheme to Javascript. For instance we use null instead of '() in Scheme. 
 And cdr(a, s) instead of (cdr a s).<br>
 <br>
 All primitives (car cdr cons isAtom isEq isNull) from Chapter 1 "Toys" are available in Sandbox 1 so you can do the exercises in Chapter 2-4.<br>
 Do not use "or" in Chapter 2, instead use || in Javascript. Same for "and" and &&.<br>
-<br>
-All the solutions in Javascript up to Chapter 10 by Douglas Crockford are
-<a href="https://joostjacob.github.io/Little/little.js">here</a>.<br>
 <br>
 Surprises:<br>
 To inspect the function code of e.g. car you can type "car;" as the last line in the Input Box.<br>
