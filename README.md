@@ -8,12 +8,18 @@ Can it also be done for
 Pay attention to str2sx(my_string) and sx2str(my_s_expression) in the example code in the Input Box. 
 They are convenience functions for entering and viewing s-expressions. 
 On iPad if you key BackSpace the highlighted example code will disappear. 
-If you key Command+Arrow-Down it will stay and you can add or change code.
+If you key Command+Arrow-Down it will stay and you can add or change code. Solutions for
+[Chapter 2](https://joostjacob.github.io/Little/chapter2.js) and 
+[Chapter 3](https://joostjacob.github.io/Little/chapter3.js) and 
+[Chapter 4](https://joostjacob.github.io/Little/chapter4.js).
 - **Chapter 5 and 6**: Use [Sandbox 5](https://joostjacob.github.io/Little/chapter5.html) with solutions from Chapters 2–4 included.
+Solutions for [Chapter 5](https://joostjacob.github.io/Little/chapter5.js) and 
+[Chapter 6](https://joostjacob.github.io/Little/chapter6.js).
 - **Chapter 7 and 8**: Use [Sandbox 7](https://joostjacob.github.io/Little/chapter7.html) with isEqual from Chapter 5 replacing isEq.
+Solutions for [Chapter 7](https://joostjacob.github.io/Little/chapter7.js) and 
+[Chapter 8](https://joostjacob.github.io/Little/chapter8.js).
 - **Chapter 9 and Beyond**: Use [Sandbox 9](https://joostjacob.github.io/Little/chapter9.html) with answers from Chapter 7 and 8 included. 
-Here are the solutions for [Chapter 8](https://joostjacob.github.io/Little/chapter8.js) and 
-[Chapter 9](https://joostjacob.github.io/Little/chapter9.js) and 
+Solutions for [Chapter 9](https://joostjacob.github.io/Little/chapter9.js) and 
 [Chapter 10](https://joostjacob.github.io/Little/chapter10.js). 
 And of course a little Scheme [interpreter](https://joostjacob.github.io/Little/scheme10.html), without define, just like in the book.
 - **From The Seasoned Schemer**: here is [Chapter 11](https://joostjacob.github.io/Little/chapter11.js).
