@@ -34,12 +34,8 @@ Surprises:<br>
 To inspect the function code of e.g. car you can type "car;" as the last line in the Input Box.<br>
 <hr>
 If you want to try Scheme there is a great site at <a href="https://try.scheme.org">Try Scheme</a>.<br>
-<a href="https://www.crockford.com/little.html">The Little Javascripter by Douglas Crockford</a> 
-is also hosted <a href="https://joostjacob.github.io/Little/ljs.html">here</a>.
 <br>
 In Scheme a quote character must be a real quote. <br>
 On iPad turn off smart quotes: Go to Settings - General - Keyboard, and toggle off "Smart Punctuation". 
 Or use (define my_atom (quote atom)).<br>
 <br>
-Surprises:<br>
-(isList '()): false.
