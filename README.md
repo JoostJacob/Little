@@ -6,8 +6,7 @@ Can it also be done for
 <br>
 - **The Little Schemer Chapter 1-4 Exercises**: Try them in the [Sandbox 1](https://joostjacob.github.io/Little/toys.html).<br>
 Pay attention to str2sx(my_string) and sx2str(my_s_expression) in the example code in the Input Box. 
-They are convenience functions for entering and viewing s-expressions. 
-If you really want to inspect the Javascript implementation use JSON.stringify(my_s_expression).
+They are convenience functions for entering and viewing s-expressions. On iPad if you key BackSpace the highlighted example code will disappear. If you key Command+<Arrow-Down> it will stay.
 - **Chapter 5 and 6**: Use [Sandbox 5](https://joostjacob.github.io/Little/chapter5.html) with solutions from Chapters 2–4 included.
 - **Chapter 7 and 8**: Use [Sandbox 7](https://joostjacob.github.io/Little/chapter7.html) with isEqual from Chapter 5 replacing isEq.
 - **Chapter 9 and Beyond**: Use [Sandbox 9](https://joostjacob.github.io/Little/chapter9.html) with answers from Chapter 7 and 8 included. 
@@ -16,17 +15,16 @@ Here are the solutions for [Chapter 8](https://joostjacob.github.io/Little/chapt
 [Chapter 10](https://joostjacob.github.io/Little/chapter10.js). 
 And of course a little Scheme [interpreter](https://joostjacob.github.io/Little/scheme10.html), without define, just like in the book.
 <br>
+From The Seasoned Schemer here is [Chapter 11](https://joostjacob.github.io/Little/chapter11.js).
+<br>
 <br>
 The <a href="https://www.crockford.com/little.html">Little Javascripter by Douglas Crockford</a> has a table 
 with transformation rules from Scheme to Javascript. For instance we use null instead of '() in Scheme. 
 And cdr(a, s) instead of (cdr a s).<br>
 <br>
-All primitives (car cdr cons isAtom isEq isNull) from Chapter 1 "Toys" are available in Sandbox 1 so you can do the exercises in Chapter 2 "Do It, Do It Again, and Again, and Again..." and the exercises in Chapter 3 "Cons the Magnificent" and in Chapter 4 "Numbers Games".<br>
+All primitives (car cdr cons isAtom isEq isNull) from Chapter 1 "Toys" are available in Sandbox 1 so you can do the exercises in Chapter 2-4.<br>
 Do not use "or" in Chapter 2, instead use || in Javascript. Same for "and" and &&.<br>
 <br>
-For Chapter 5 "*Oh My Gawd*: It's Full of Stars", you need the solutions from Chapters 1-4, so use Sandbox 5. 
-Use isEq(a, b) for non-numeric atoms, isEqn(n, m) for numbers, and isEqan(a, b) for any two atoms. 
-Spoiler alert: Chapter 5 brings isEqual(s1, s2), for any two s-expressions.<br>
 <br>
 All the solutions in Javascript up to Chapter 10 by Douglas Crockford are
 <a href="https://joostjacob.github.io/Little/little.js">here</a>.<br>
