@@ -4,7 +4,7 @@
 function plus2(a, b) {  // this is what I came up with
   return isZero(b)
   ? a
-  : plus(add1(a), sub1(b));
+  : plus2(add1(a), sub1(b));
 }
  
 function plus(a, b) { // this is like the solution in Little Scheme
