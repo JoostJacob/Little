@@ -20,7 +20,7 @@
 }
 
 let s = str2sx("(a b c b d e bb f (b) g)");
-sx2str(occurstar("b", s));</textarea>
+return sx2str(occurstar("b", s));</textarea>
 </fieldset>
 
 <p align="center">
@@ -51,7 +51,7 @@ myInput.select();
 
     myEval.onclick = function (e) {
         try {
-        myOutput.value = eval(myInput.value);
+          myOutput.value = new Function(myInput.value)();
         } catch (error) {
             myOutput.value = error;
         }
