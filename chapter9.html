@@ -15,7 +15,8 @@
   : lt(n, 2)
   ? car(lat)
   : pick(sub1(n), cdr(lat));
-}</textarea>
+}
+return sx2str(pick(2,str2sx("(We also want dessert"))));</textarea>
 </fieldset>
 
 <p align="center">
@@ -46,7 +47,7 @@ myInput.select();
 
     myEval.onclick = function (e) {
         try {
-        myOutput.value = eval(myInput.value);
+          myOutput.value = new Function(myInput.value)();
         } catch (error) {
             myOutput.value = error;
         }
