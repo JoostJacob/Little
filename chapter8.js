@@ -1,12 +1,4 @@
 
-function rember_f_1(isTest, a, ls) { // isTest is a boolean function with 2 params, ls is a list of s-expressions
-  return isNull(ls)
-  ? null
-  : isTest(car(ls), a)
-  ? rember_f_1(isTest, a, cdr(ls))
-  : cons(car(ls), rember_f_1(isTest, a, cdr(ls)));
-}
-
 function isEq_c(a) {
   return function (x) {
     return isEq(x, a);
@@ -164,8 +156,8 @@ function ch8_answer(se, so) { // col function for filter2
   return cons(starstar(se), plusstar(so));
 }
 
-// usage filter2(sx, isEven, ch8_answer)
-function filter2(s, isTest, col) {  // maybe something to keep
+// My addition, for collecting two lists. Example usage filter2(sx, isEven, ch8_answer)
+function filter2(s, isTest, col) {
   return isNull(s)
   ? col(null, null)
   : isNumber(car(s))
