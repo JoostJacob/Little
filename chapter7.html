@@ -16,7 +16,7 @@
 }
 
 s = str2sx("(apple 3 pear 4 9 apple 3 4)");
-sx2str(makeSet(s));
+return sx2str(makeSet(s));
 </textarea>
 </fieldset>
 
@@ -48,7 +48,7 @@ myInput.select();
 
     myEval.onclick = function (e) {
         try {
-        myOutput.value = eval(myInput.value);
+          myOutput.value = new Function(myInput.value)();
         } catch (error) {
             myOutput.value = error;
         }
