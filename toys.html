@@ -55,13 +55,17 @@ var myEval = document.getElementById("evalbutton");
 myInput.focus();
 myInput.select();
 
-    myEval.onclick = function (e) {
+myEval.onclick = function (e) {
         try {
           myOutput.value = new Function(myInput.value)();
+          if (myOutput.value === "undefined") {
+            myOutput.value = "undefined :  Did you forget a return statement?"
+          }
         } catch (error) {
             myOutput.value = error;
         }
         myInput.focus();
         myInput.select();
-    };
+};
+  
 </script>
