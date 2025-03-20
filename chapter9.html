@@ -48,6 +48,9 @@ myInput.select();
     myEval.onclick = function (e) {
         try {
           myOutput.value = new Function(myInput.value)();
+          if myOutput.value === "undefined" {
+            myOutput.value = "undefined :  Did you forget a return statement?"
+          }
         } catch (error) {
             myOutput.value = error;
         }
