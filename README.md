@@ -24,7 +24,8 @@ Solutions for [Chapter 7](https://joostjacob.github.io/Little/chapter7.js) and
 Solutions for [Chapter 9](https://joostjacob.github.io/Little/chapter9.js) and 
 [Chapter 10](https://joostjacob.github.io/Little/chapter10.js). 
 And of course a little Scheme [interpreter](https://joostjacob.github.io/Little/scheme10.html), without define, just like in the book.
-- **From The Seasoned Schemer**: here is [Chapter 11](https://joostjacob.github.io/Little/chapter11.js).
+- **From The Seasoned Schemer**: here is [Chapter 11](https://joostjacob.github.io/Little/chapter11.js) and 
+[Chapter 12](https://joostjacob.github.io/Little/chapter12.js).
 <br>
 <br>
 The <a href="https://www.crockford.com/little.html">Little Javascripter by Douglas Crockford</a> has a table 
