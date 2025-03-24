@@ -32,7 +32,7 @@ The <a href="https://www.crockford.com/little.html">Little Javascripter by Dougl
 with transformation rules from Scheme to Javascript. For instance we use null instead of '() in Scheme. 
 And cdr(a, s) instead of (cdr a s).<br>
 <br>
-All primitives (car cdr cons isAtom isEq isNull) from Chapter 1 "Toys" are available in Sandbox 1 so you can do the exercises in Chapter 2-4.<br>
+All primitives (car cdr cons isAtom isEq isNull) from Chapter 1 "Toys" are available in the Sandboxes.<br>
 Do not use "or" in Chapter 2, instead use || in Javascript. Same for "and" and &&.<br>
 <br>
 <hr>
