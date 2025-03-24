@@ -218,14 +218,14 @@ function apply_closure(closure, vals) {
     extend_table(new_entry(formals_of(closure), vals), table_of(closure)));
 }
 
-let closure = str2sx("((((u v w)(1 2 3))((x y z)(4 5 6)))(x y)(cons z x))");
-let vals = str2sx("((a b c)(d e f))");
+//let closure = str2sx("((((u v w)(1 2 3))((x y z)(4 5 6)))(x y)(cons z x))");
+//let vals = str2sx("((a b c)(d e f))");
 
 //sx2str(new_entry(formals_of(closure), vals));
 //sx2str(table_of(closure));
 
-let table = extend_table(new_entry(formals_of(closure), vals), table_of(closure));
-let args = str2sx("(z x)");
+//let table = extend_table(new_entry(formals_of(closure), vals), table_of(closure));
+//let args = str2sx("(z x)");
 
 //sx2str(evlis(args, table));  // ==> (6 (a b c))
 //sx2str(meaning("cons", table)); // ==> (primitive cons)
