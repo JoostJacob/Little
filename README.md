@@ -8,12 +8,8 @@ Pay attention to str2sx(my_string) and sx2str(my_s_expression) in the example co
 They are convenience functions for entering and viewing s-expressions.<br> 
 On iPad if you key BackSpace the highlighted example code will disappear. 
 If you key Command+Arrow-Down it will stay and you can add or change code.<br>
-Use the return statement to make results appear in the Output Box. If you return the name of a function it's definition will appear in code. Works great if you want to look up how a function is defined!
-<br>
-Solutions for
-[Chapter 2](https://joostjacob.github.io/Little/chapter2.js) and 
-[Chapter 3](https://joostjacob.github.io/Little/chapter3.js) and 
-[Chapter 4](https://joostjacob.github.io/Little/chapter4.js).<br>
+Use the return statement to make results appear in the Output Box. If you return the name of a function it's definition will appear in code. Works great if you want to look up how a function is defined!<br>
+Solutions for [Chapter 2](https://joostjacob.github.io/Little/chapter2.js) and [Chapter 3](https://joostjacob.github.io/Little/chapter3.js) and [Chapter 4](https://joostjacob.github.io/Little/chapter4.js).<br>
 
 - **Chapter 5 and 6**: Use [Sandbox 5](https://joostjacob.github.io/Little/chapter5.html) with solutions from Chapters 2–4 included.
 Solutions for [Chapter 5](https://joostjacob.github.io/Little/chapter5.js) and 
@@ -29,9 +25,7 @@ Solutions for [Chapter 9](https://joostjacob.github.io/Little/chapter9.js) and
 And of course a little Scheme [interpreter](https://joostjacob.github.io/Little/scheme10.html), 
 without define, just like in the book.<br>
 
-- **From The Seasoned Schemer**: here is [Chapter 11](https://joostjacob.github.io/Little/chapter11.js),  
-[Chapter 12](https://joostjacob.github.io/Little/chapter12.js) and 
-[Chapter 13](https://joostjacob.github.io/Little/chapter13.js).<br>
+- **From The Seasoned Schemer**: here is [Chapter 11](https://joostjacob.github.io/Little/chapter11.js), [Chapter 12](https://joostjacob.github.io/Little/chapter12.js) and [Chapter 13](https://joostjacob.github.io/Little/chapter13.js).<br>
 
 <br>
 The <a href="https://www.crockford.com/little.html">Little Javascripter by Douglas Crockford</a> has a table 
