@@ -1,11 +1,9 @@
 
-eval(jsc.readFile("pre9.js"));
-
 // Chapter 13 Hop, Skip, and Jump
 // Introduces continuations in Scheme.
 // In Javascript you can also throw something that is not Error class 
 
-function intersectAll(lset) {
+function intersectAll(lset) { // different from existing intersectall
   let A, I;
   A = function (lset) {   // intersectAll
    if (isNull(car(lset))) {
@@ -39,7 +37,7 @@ function intersectAll(lset) {
     try { 
       return A(lset);
     }
-    catch {
+    catch (result) {
       if ((result === null) || (Array.isArray(result))) {
         return result;
       } else {
@@ -49,7 +47,7 @@ function intersectAll(lset) {
   }
 }
 
-//return sx2str(intersectall(str2sx("((a b c)(c)(x c z))")));
+//return sx2str(intersectAll(str2sx("((a b c)(c)(x c z))")));
 
 function rember_up_to(a, lat) {
   function R(lat) { // so you can simulate continuations with exceptions.
