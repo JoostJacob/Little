@@ -1,9 +1,11 @@
 
+eval(jsc.readFile("pre9.js"));
+
 // Chapter 13 Hop, Skip, and Jump
 // Introduces continuations in Scheme.
 // In Javascript you can also throw something that is not Error class 
 
-function intersectall(lset) {
+function intersectAll(lset) {
   let A, I;
   A = function (lset) {   // intersectAll
    if (isNull(car(lset))) {
@@ -31,18 +33,23 @@ function intersectall(lset) {
       return J(s1);
     }
   }
-  try {
-    if (isNull(lset)) {
-      return null;
-    } else {
+  if (isNull(lset)) {
+    return null;
+  } else {
+    try { 
       return A(lset);
     }
-  } catch (result) {
-    return result;
+    catch {
+      if ((result === null) || (Array.isArray(result))) {
+        return result;
+      } else {
+        throw result;
+      }
+    }
   }
 }
 
-// sx2str(intersectall(str2sx("((a b c)(c)(x c z))")));
+//return sx2str(intersectall(str2sx("((a b c)(c)(x c z))")));
 
 function rember_up_to(a, lat) {
   function R(lat) { // so you can simulate continuations with exceptions.
@@ -57,9 +64,37 @@ function rember_up_to(a, lat) {
   try {
     return R(lat);
   } catch (result) {
-    return result;
+      if ((result === null) || (Array.isArray(result))) {
+        return result;
+      } else {
+        throw result;
+      }
   }
 }
 
-// sx2str(rember_up_to(2, str2sx("(1 1 2 3 2 4 5)")));
+function reverse(sx) {
+  let result = null;
+  while (sx) {
+    result = cons(car(sx), result);
+    sx = cdr(sx);
+  }
+  return result;
+}
+
+// normal Javascript implementation, without using exception
+// Note lat (a b c) is [a, [b, [c, null]]]
+function rember_up_to_js(a, lat) {
+  let result = null; 
+  while (lat) {
+    if (isEq(car(lat), a)) {
+      result = null;
+    } else {
+      result = cons(car(lat), result);
+    }
+    lat = cdr(lat);
+  }
+  return reverse(result); // reverse because we added 1st first 
+}
+
+//return sx2str(rember_up_to(2, str2sx("(1 2 3 2 4 5)")));
 
