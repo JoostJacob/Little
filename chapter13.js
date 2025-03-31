@@ -1,9 +1,8 @@
-
 // Chapter 13 Hop, Skip, and Jump
 // Introduces continuations in Scheme.
 // In Javascript you can also throw something that is not Error class 
 
-function intersectAll(lset) { // different from existing intersectall
+function intersectAll(lset) {
   let A, I;
   A = function (lset) {   // intersectAll
    if (isNull(car(lset))) {
@@ -70,29 +69,27 @@ function rember_up_to(a, lat) {
   }
 }
 
-function reverse(sx) {
-  let result = null;
-  while (sx) {
-    result = cons(car(sx), result);
-    sx = cdr(sx);
+// Idiomatic Javascript implementation using while, without exception
+// Note lat (a b c) is implemented as [a, [b, [c, null]]]
+function rember_up_to_js(a, lat) {
+  let result = null; 
+  let tail; // assigned when result is not null
+  while (lat ) {
+    if (isEq(car(lat), a)) {
+      result = null;
+    } else {
+      if (result) {
+        tail[1] = cons(car(lat), null);
+        tail = tail[1];
+      } else {
+        result = cons(car(lat), null);
+        tail = result;
+      }
+    }
+    lat = cdr(lat);
   }
   return result;
 }
 
-// normal Javascript implementation, without using exception
-// Note lat (a b c) is [a, [b, [c, null]]]
-function rember_up_to_js(a, lat) {
-  let result = null; 
-  while (lat) {
-    if (isEq(car(lat), a)) {
-      result = null;
-    } else {
-      result = cons(car(lat), result);
-    }
-    lat = cdr(lat);
-  }
-  return reverse(result); // reverse because we added 1st first 
-}
-
-//return sx2str(rember_up_to(2, str2sx("(1 2 3 2 4 5)")));
+//return sx2str(rember_up_to_js(2, str2sx("(9 2 3 2 4 5)")));
 
