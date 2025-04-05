@@ -40,7 +40,7 @@ function intersectAll(lset) {
       if ((result === null) || (Array.isArray(result))) {
         return result;
       } else {
-        throw result;
+        throw result; // do not catch SyntaxError, RangeError, etc
       }
     }
   }
@@ -64,7 +64,7 @@ function rember_up_to(a, lat) {
       if ((result === null) || (Array.isArray(result))) {
         return result;
       } else {
-        throw result;
+        throw result; // do not catch SyntaxError etc.
       }
   }
 }
