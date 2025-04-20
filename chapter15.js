@@ -20,7 +20,6 @@ function dinerR(food) {
     return cons('milkshake', cons(food, null));
 }
 
-
 function make_o() { // use outer function giving closure over x
     let x = 'minestrone';
     return function(food) {
@@ -39,6 +38,9 @@ x = food;
 return cons(food, cons(x, null));
     };
 })();
+
+// Of course there are several class based solutions possible in Javascript.
+// We try to stay close to the Little Schemer ways.
 
 function make_g() { // use outer function giving closure over x
     let x = 'minestrone';
