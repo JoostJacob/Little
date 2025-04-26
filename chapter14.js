@@ -82,31 +82,29 @@ function rember1star(a, ls) {
   let R = function(l) {
     if (isNull(l)) {
       throw "no";
-    }
-    else if (isAtom(car(l))) {
+    } else if (isAtom(car(l))) {
       if (isEq(car(l), a)) {
-        return cdr(l)
-      }
-      else {
+      	return cdr(l)
+      } else {
         return cons(car(l), R(cdr(l)));
       }
-    }
-    else { // car(l) is a list
+    } else { // car(l) is a list
+      let new_car;
       try {
-        return cons(R(car(l)), cdr(l));
+        new_car = R(car(l));
       } catch(oh2) {
-        if (isAtom(oh2)) return cons(car(l), R(cdr(l)))
-        else throw oh2; // do not catch SyntaxError etc.
+        return cons(car(l), R(cdr(l)));
       }
+      return cons(new_car, cdr(l)); 
     }
   }
-
+  let new_l;
   try {
-    return R(ls);
+    new_l = R(ls);
   } catch(oh) {
-    if (isAtom(oh)) return ls
-    else throw oh; // do not catch SyntaxError etc.
+    return ls;
   }
+  return new_l;
 }
 
 //return sx2str(rember1star("a", str2sx("((a) a)")));
