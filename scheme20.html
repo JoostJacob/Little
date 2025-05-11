@@ -13,8 +13,8 @@
     height: 3in;
     overflow: auto;
     padding: 1em;
-    width: 95%;">((define a 40)
-  (add1 (add1 a)))</textarea>
+    width: 95%;">(define a 40)
+(add1 (add1 a))</textarea>
 </fieldset>
 
 <p align="center">
@@ -45,7 +45,8 @@ myInput.select();
 
     myEval.onclick = function (e) {
         try {
-        myOutput.value = sx2str(run(str2sx(myInput.value)));
+          let sxss = cons(str2sx(myInput.value), null);
+          myOutput.value = sx2str(run(sxss)));
         } catch (error) {
             myOutput.value = error;
         }
