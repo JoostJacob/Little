@@ -297,11 +297,11 @@
 
 (define body-of
   (lambda (x)
-    (car (cdr x))))
+    (cdr (cdr x))))
 
 (define ccbody-of
   (lambda (x)
-    (car (cdr x))))
+    (cdr (cdr x))))
 
 (define name-of
   (lambda (x)
