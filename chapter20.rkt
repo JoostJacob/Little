@@ -229,7 +229,7 @@
                    (extend
                     (name-of e)
                     (box (a-prim skip))
-                    (table))))))
+                    table)))))
 
 (define abort (quote INITIAL_ABORT))
 
