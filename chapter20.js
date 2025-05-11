@@ -269,8 +269,8 @@ function list_to_action(e) {
 
 function text_of(x)    { return car(cdr(x)); }
 function formals_of(x) { return car(cdr(x)); }
-function body_of(x)    { return car(cdr(x)); }
-function ccbody_of(x)  { return car(cdr(x)); }
+function body_of(x)    { return cdr(cdr(x)); }
+function ccbody_of(x)  { return cdr(cdr(x)); }
 function name_of(x)    { return car(cdr(x)); }
 
 function right_side_of(x) {
