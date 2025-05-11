@@ -45,7 +45,7 @@ myInput.select();
 
     myEval.onclick = function (e) {
         try {
-          let sxss = cons(str2sx(myInput.value), null);
+          let sxss = str2sx('('+myInput.value+')');
           myOutput.value = sx2str(run(sxss)));
         } catch (error) {
             myOutput.value = error;
