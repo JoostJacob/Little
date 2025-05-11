@@ -243,9 +243,9 @@
 
 (define the-empty-table
   (lambda (name)
-    ((abort
+    (abort
      (cons (quote no-answer)
-           (cons name (quote ())))))))
+           (cons name (quote ()))))))
 
 (define global-table
   the-empty-table)
