@@ -45,7 +45,7 @@ myInput.select();
 
     myEval.onclick = function (e) {
         try {
-        myOutput.value = run(myInput.value);
+        myOutput.value = run(str2sx(myInput.value));
         } catch (error) {
             myOutput.value = error;
         }
