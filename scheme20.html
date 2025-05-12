@@ -13,8 +13,21 @@
     height: 3in;
     overflow: auto;
     padding: 1em;
-    width: 95%;">(define a 40)
-(add1 (add1 a))</textarea>
+    width: 95%;">(define leftmost
+  (lambda (l)
+    (letcc skip
+      (lm l skip))))
+
+(define lm
+  (lambda (l out)
+    (cond
+      ((null? l) (quote ()))
+      ((atom? (car l)) (out (car l)))
+      (else ((lambda (x)
+               (lm (car l) out)
+               (lm (cdr l) out)) 0)))))
+
+(leftmost (quote (((a)) b (c))))</textarea>
 </fieldset>
 
 <p align="center">
