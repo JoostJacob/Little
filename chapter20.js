@@ -64,7 +64,7 @@ function Sidentifier(e, table) {
   return unbox(lookup(table, e));
 }
 
-function Sset(e, table) {
+function Sset_bang(e, table) {
   return setbox(
     lookup(table, name_of(e)),
     meaning(right_side_of(e), table));
@@ -97,7 +97,11 @@ function box_all(vals) {
 function multi_extend(names, values, table) {
   return isNull(names)
     ? table
-    : extend(cdr(names), cdr(values), multi_extend(cdr(table)));
+    : extend(car(names), 
+             car(values), 
+             multi_extend(cdr(names), 
+                          cdr(values), 
+                          table));
 }
 
 function Sapplication(e, table) {
@@ -121,7 +125,7 @@ function a_prim(p) {
 
 function b_prim(p) {
   return function(args_list) {
-    return p(car(args_list, cdr(args_list)));
+    return p(car(args_list, car(cdr(args_list))));
   }
 }
 
@@ -259,7 +263,7 @@ function list_to_action(e) {
       ? Slambda
       : isEq(car(e), 'letcc')
       ? Sletcc
-      : isEq(car(e), 'set_bang')
+      : isEq(car(e), 'set!')
       ? Sset_bang
       : isEq(car(e), 'cond')
       ? Scond
@@ -288,7 +292,7 @@ function isElse(x) {
 }
 
 function question_of(x) { return car(x); }
-function answer_of(x) { return cdr(x); }
+function answer_of(x) { return car(cdr(x)); }
 function function_of(x) { return car(x); }
 function arguments_of(x) { return cdr(x); }
 
