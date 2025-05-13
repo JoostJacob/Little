@@ -34,7 +34,7 @@ Chapter 20 gives the [final interpreter](https://joostjacob.github.io/Little/sch
 <br>
 The <a href="https://www.crockford.com/little.html">Little Javascripter by Douglas Crockford</a> has a table 
 with transformation rules from Scheme to Javascript. For instance we use null instead of '() in Scheme. 
-And cdr(a, s) instead of (cdr a s).<br>
+And cdr(a, s) instead of (cdr a s). Do read what he says about The Little Schemer: it was an important part of my motivation to complete this project.<br>
 <br>
 <hr>
 If you want to try Scheme there is a great site at <a href="https://try.scheme.org">Try Scheme</a>. Not suitable for iPad alas since you need to do things like CTRL-ENTER.<br>
