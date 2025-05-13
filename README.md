@@ -42,3 +42,6 @@ If you want to try Scheme there is a great site at <a href="https://try.scheme.o
 On iPad turn off smart quotes if you want to code in Scheme: Go to Settings - General - Keyboard, and toggle off "Smart Punctuation". 
 Or use (define my_atom (quote atom)).<br>
 <br>
+'Every reader should ask himself periodically "Toward what end, toward what end?"—but do not ask it too 
+often lest you pass up the fun of programming for the constipation of bittersweet philosophy.'<br>
+-- Alan J. Perlis
