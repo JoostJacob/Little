@@ -37,7 +37,7 @@ with transformation rules from Scheme to Javascript. For instance we use null in
 And cdr(a, s) instead of (cdr a s).<br>
 <br>
 <hr>
-If you want to try Scheme there is a great site at <a href="https://try.scheme.org">Try Scheme</a>. Not suitable iPad since you need to do things like CTRL-ENTER.<br>
+If you want to try Scheme there is a great site at <a href="https://try.scheme.org">Try Scheme</a>. Not suitable for iPad alas since you need to do things like CTRL-ENTER.<br>
 <br>
 On iPad turn off smart quotes if you want to code in Scheme: Go to Settings - General - Keyboard, and toggle off "Smart Punctuation". 
 Or use (define my_atom (quote atom)).<br>
