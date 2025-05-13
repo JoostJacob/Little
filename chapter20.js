@@ -125,7 +125,7 @@ function a_prim(p) {
 
 function b_prim(p) {
   return function(args_list) {
-    return p(car(args_list, car(cdr(args_list))));
+    return p(car(args_list), car(cdr(args_list)));
   }
 }
 
