@@ -4,11 +4,10 @@ the great SICP textbook</a>.<br>
 Can it also be done for 
 <a href="https://mitpress.mit.edu/little-books-on-big-topics-in-computer-science/">the Little Books</a>?<br>
 - **The Little Schemer Chapter 1-4 Exercises**: Try them in the [Sandbox 1](https://joostjacob.github.io/Little/toys.html).<br>
+All primitives (car cdr cons isAtom isEq isNull) from Chapter 1 "Toys" are available in the Sandboxes.<br>
 Pay attention to str2sx(my_string) and sx2str(my_s_expression) in the example code in the Input Box. 
 They are convenience functions for entering and viewing s-expressions.<br> 
-All primitives (car cdr cons isAtom isEq isNull) from Chapter 1 "Toys" are available in the Sandboxes.<br>
 Do not use "or" in Chapter 2, instead use || in Javascript. Same for "and" and &&.<br>
-<br>
 On iPad in the Input Box if you key BackSpace the highlighted example code will disappear. 
 If you key Command+Arrow-Down it will stay and you can add or change code.<br>
 Use the return statement to make results appear in the Output Box. If you return the name of a function it's definition will appear in code. Works great if you want to look up how a function is defined!<br>
