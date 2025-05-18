@@ -1,5 +1,5 @@
 
-// Chapter 3
+// Chapter 3 Numbers Games
 function rember(a, lat) {  
   return isNull(lat)  
   ? null  
