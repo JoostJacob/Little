@@ -1,4 +1,6 @@
 
+// Chapter 10 What Is the Value of All of This?
+
 let new_entry = build;
 
 function lookup_in_entry_help(name, names, values, entry_f) {
