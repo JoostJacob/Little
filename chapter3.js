@@ -1,5 +1,5 @@
 
-// Chapter 3 Numbers Games
+// Chapter 3 Cons the Magnificent
 function rember(a, lat) {  
   return isNull(lat)  
   ? null  
