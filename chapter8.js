@@ -1,4 +1,6 @@
 
+// Chapter 8 Lambda the Ultimate
+
 function isEq_c(a) {
   return function (x) {
     return isEq(x, a);
