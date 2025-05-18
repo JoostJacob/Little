@@ -1,4 +1,6 @@
 
+// Chapter 11 Welcome Back to the Show
+
 function isFirst(a, lat) {
   return isNull(lat)
   ? false
