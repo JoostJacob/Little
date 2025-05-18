@@ -1,4 +1,6 @@
 
+// Chapter 6 Shadows
+
 function isNumbered(s) {
   return isAtom(s)
   ? isNumber(s)
