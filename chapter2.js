@@ -1,5 +1,5 @@
 
-// Chapter 2
+// Chapter 2 Do It Again, and Again, and Again ...
 function isLat(l) {  
   return isNull(l)  
   ? true  
