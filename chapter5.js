@@ -1,5 +1,5 @@
 
-// Chapter 5 answers from The Little Schemer
+// Chapter 5 *Oh My Gawd*: It's Full of Stars
 
 function remberstar(a, l) {
   return isNull(l)
