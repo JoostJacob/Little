@@ -1,4 +1,6 @@
 
+// Chapter 7.  Friends and Relations
+
 function isSet(lat) {
   return isNull(lat)
   ? true
@@ -17,14 +19,6 @@ function isSubset(set1, set2) {
   return isNull(set1) || isMember(car(set1), set2) && isSubset(cdr(set1), set2);
 }
 
-function isEqset_mytry_works_but_can_be_shorter(set1, set2) {
-  return isNull(set1) && isNull(set2)
-  ? true
-  : isNull(set1) || isNull(set2)
-  ? false
-  : isMember(car(set1), set2) && isEqset(cdr(set1), rember(car(set1), set2));
-}
-
 function isEqset(set1, set2) {
   return isSubset(set1, set2) && isSubset(set2, set1);
 }
@@ -41,12 +35,6 @@ function intersect(set1, set2) {
   : isMember(car(set1), set2)
   ? cons(car(set1), intersect(cdr(set1), set2))
   : intersect(cdr(set1), set2);
-}
-
-function union_mine(set1, set2) {
-  return isNull(set1)
-  ? set2
-  : cons(car(set1), union_mine(cdr(set1), rember(car(set1), set2)));
 }
 
 function union(set1, set2) {
