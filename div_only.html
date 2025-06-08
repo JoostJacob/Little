@@ -1,3 +1,60 @@
-<div id="resultDiv">
-    <script src="div_only.js"></script>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Persistent Table</title>
+  <meta charset="UTF-8">
+  <style>
+    table, td, th { border: 1px solid black; border-collapse: collapse; padding: 5px; }
+  </style>
+</head>
+<body>
+  <h1>Editable Table</h1>
+  <table id="dataTable">
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+    </tr>
+    <tr>
+      <td contenteditable="true"></td>
+      <td contenteditable="true"></td>
+    </tr>
+    <tr>
+      <td contenteditable="true"></td>
+      <td contenteditable="true"></td>
+    </tr>
+  </table>
+
+  <p>
+    <button onclick="saveTable()">Save</button>
+    <button onclick="loadTable()">Load</button>
+  </p>
+
+  <script>
+    function saveTable() {
+      const table = document.getElementById('dataTable');
+      const data = [];
+      for (let i = 1; i < table.rows.length; i++) {
+        const cells = table.rows[i].cells;
+        data.push([cells[0].innerText, cells[1].innerText]);
+      }
+      localStorage.setItem('myTableData', JSON.stringify(data));
+      alert('Saved!');
+    }
+
+    function loadTable() {
+      const table = document.getElementById('dataTable');
+      const data = JSON.parse(localStorage.getItem('myTableData') || '[]');
+      for (let i = 0; i < data.length && i + 1 < table.rows.length; i++) {
+        table.rows[i + 1].cells[0].innerText = data[i][0];
+        table.rows[i + 1].cells[1].innerText = data[i][1];
+      }
+      alert('Loaded!');
+    }
+
+    // Auto-load if data is present
+    if (localStorage.getItem('myTableData')) {
+      loadTable();
+    }
+  </script>
+</body>
+</html>
